@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap");
+
+:root {
+  --color-primary: #3f00ff;
+  --color-primary-light: #541dfa;
+  --color-primary-alpha-75: #3f00ff75;
+  --color-primary-alpha-90: #3f00ff90;
+  --color-primary-contrast: #fbeaff;
+  --color-secondary: #3dbea9;
+  --color-secondary-light: #5ebeae;
+  --color-shadow-on-secondary: #dbc44125;
+  --color-white: #fff;
+  --color-black: #000;
+  --navbar-height: 4.5rem;
+}
+
+/* CSS Reset */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* CSS Reset */
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  padding: 1rem;
+}
+
+.text-md {
+  font-size: 1.25rem;
+}
+
+.text-default {
+  color: var(--color-black);
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-primary {
+  color: var(--color-primary-contrast);
+}
+
+.navbar {
+  width: 100%;
+  background-color: var(--color-primary);
+  text-shadow: 1px 1px 4px var(--color-black);
+  padding: 0 1.5rem;
+  display: flex;
+}
+
+.navbar__brand {
+  color: var(--color-white);
+}
+
+.navbar__list {
+  height: var(--navbar-height);
+  color: var(--color-white);
+}
+
+.navbar__list-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.navbar__list-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__link:link,
+.navbar__link:visited {
+  color: var(--color-white);
+  text-shadow: 1px 1px 4px var(--color-black);
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: all 0.2s;
+}
+.navbar__link:hover,
+.navbar__link:active,
+.navbar__link.active {
+  background-color: var(--color-secondary);
+  box-shadow: 1px 1px 4px var(--color-shadow-on-secondary);
+  border-radius: 0.5rem;
+  transform: translateY(-1px);
+}
+
+.layout {
+  display: flex;
+  column-gap: 2rem;
+  /* justify-content: ; */
+}
+
+.card {
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 4px var(--color-primary-alpha-75);
+  background-color: #3dbea9;
+  padding: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.card h4 {
+  text-decoration: underline;
+}
+
+.card:hover {
+  transform: translate(-4px, -2px);
+  box-shadow: 6px 6px 12px var(--color-primary-alpha-75);
+}
+
+.card:active {
+  transform: translate(0);
+  box-shadow: 2px 2px 4px var(--color-primary-alpha-75);
+}
+
+.banner {
+  width: 150px;
+  height: 100%;
+  margin: 8px 0;
+}
+
+.banner__img {
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 2px 2px 4px var(--color-black);
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar__list {
+    height: 8rem;
+  }
+
+  .layout {
+    /* display: flex; */
+    flex-direction: column;
+    row-gap: 2rem;
+    /* justify-content: ; */
+  }
+}

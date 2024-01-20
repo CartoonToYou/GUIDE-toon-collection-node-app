@@ -1,0 +1,32 @@
+<body>
+  <nav class="navbar">
+    <ul class="navbar__list navbar__list-left">
+      <h2 class="text-bold">
+        <a href='http://localhost:3001/' class="navbar__brand">
+          My Collections
+        </a>
+      </h2>
+      <li>
+        <p class="text-md">
+          <a href='http://localhost:3001/books'
+            class="<%= pathname.includes('books') ? 'navbar__link active' : 'navbar__link' %>">
+            Books
+          </a>
+        </p>
+      </li>
+      <li>
+        <p class="text-md">
+          <a href='http://localhost:3001/games'
+            class="<%= pathname.includes('games') ? 'navbar__link active' : 'navbar__link' %>">
+            Games
+          </a>
+        </p>
+      </li>
+      </li>
+    </ul>
+    <ul class="navbar__list navbar__list-right">
+      <li>
+        <p>Chachchai T.</p>
+      </li>
+    </ul>
+  </nav>

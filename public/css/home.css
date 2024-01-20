@@ -1,0 +1,122 @@
+.container {
+  padding: 1rem 0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  width: 100%;
+  /* height: 100dvh; */
+  /* max-width: 1140px; */
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--color-primary-alpha-90);
+  color: var(--color-primary-contrast);
+  padding: 1.5rem 0;
+  /* margin-top: 10%; */
+  position: absolute;
+  top: 35%;
+  left: 0;
+  width: 100vw;
+}
+
+.hero > * {
+  margin: 0.5rem 0;
+}
+
+.hero__logo-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 35%;
+}
+
+.hero__logo-container > .hero__logo {
+  margin: 0 16px;
+}
+
+.hero__logo {
+  font-size: 5rem;
+  color: var(--color-secondary);
+  text-shadow: 2px 2px 4px var(--color-primary-contrast);
+}
+
+.background__images {
+  position: absolute;
+  top: var(--navbar-height);
+  left: 0;
+  z-index: -1;
+}
+
+.gallery {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(8, 10.5vh);
+  grid-gap: 8px;
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: blur(2px);
+  transition: all 0.3s ease-in;
+}
+
+.gallery__img:hover {
+  filter: blur(0);
+  transform: scale(1.025);
+  border-radius: 8px;
+}
+
+.gallery__img--start {
+  object-position: 50% 0;
+}
+
+.gallery__item {
+  margin: 0;
+}
+
+.gallery__item--1 {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+
+.gallery__item--2 {
+  grid-column-start: 7;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+
+.gallery__item--3 {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 5;
+  grid-row-end: 9;
+}
+
+.gallery__item--4 {
+  grid-column-start: 7;
+  grid-column-end: 9;
+  grid-row-start: 6;
+  grid-row-end: 9;
+}
+
+.gallery__item--5 {
+  grid-column-start: 9;
+  grid-column-end: 11;
+  grid-row-start: 6;
+  grid-row-end: 9;
+}
+
+.gallery__item--6 {
+  grid-column-start: 11;
+  grid-column-end: 13;
+  grid-row-start: 6;
+  grid-row-end: 9;
+}
