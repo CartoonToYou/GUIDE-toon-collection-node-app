@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
+    "build": "pm2 index.js --name my-collections-app",
     "dev": "nodemon index.js"
   },
   "keywords": [],
@@ -13,7 +14,8 @@
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.9",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "pm2": "^5.3.1"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
