@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "build": "pm2 index.js --name my-collections-app",
+    "build": "pm2 index.js",
     "dev": "nodemon index.js"
   },
   "keywords": [],
