@@ -1,7 +1,7 @@
 const path = require("path");
 const express = require("express");
 const app = express();
-const { PORT } = require("./constants");
+const port = 3000;
 
 app.set("view engine", "ejs");
 app.set("views", "views");
@@ -32,6 +32,6 @@ app.get("/:username", (req, res, next) => {
   `);
 });
 
-app.listen(PORT, () => {
-  console.log(`Start express app listening on port:${PORT}`);
+app.listen(process.env.PORT || port, () => {
+  console.log(`Start express app listening on port:${port}`);
 });
