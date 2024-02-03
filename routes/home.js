@@ -4,8 +4,6 @@ const express = require("express");
 
 const router = express.Router();
 
-const { PORT } = require("../constants");
-
 router.get("/", (req, res, next) => {
   // res.send(`
   //   <html>

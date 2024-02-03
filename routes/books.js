@@ -2,8 +2,6 @@ const express = require("express");
 
 const router = express.Router();
 
-const { PORT } = require("../constants");
-
 router.get("/books", (req, res) => {
   res.render("books", { title: "Books", pathname: "/books" });
   // res.send(`
