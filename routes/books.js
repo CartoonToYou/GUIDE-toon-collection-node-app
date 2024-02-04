@@ -1,41 +1,18 @@
 const express = require("express");
+const url = require("url");
 
 const router = express.Router();
 
 router.get("/books", (req, res) => {
-  res.render("books", { title: "Books", pathname: "/books" });
-  // res.send(`
-  // <html>
-
-  //   <h1>Books Page</h1>
-  //   <button>
-  //     <a href='http://localhost:${PORT}/'>
-  //       HOME
-  //     </a>
-  //   </button>
-  //   <ol>
-
-  //     <li>
-  //       <a href="http://localhost:${PORT}/books/harry-potter">
-  //         Harry potter
-  //       </a>
-  //     </li>
-
-  //     <li>
-  //       <a href="http://localhost:${PORT}/books/roblox">
-  //         Roblox
-  //       </a>
-  //     </li>
-
-  //     <li>
-  //       <a href="http://localhost:${PORT}/books/lord-of-the-ring">
-  //         Lord of the ring
-  //       </a>
-  //     </li>
-
-  //   </ol>
-  // </html>
-  // `);
+  const formattedUrl = url.format({
+    protocol: req.protocol,
+    host: req.get("host"),
+  });
+  res.render("books", {
+    title: "Books",
+    pathname: "/books",
+    url: formattedUrl,
+  });
 });
 
 router.get("/books/:bookName", (req, res) => {

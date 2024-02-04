@@ -1,6 +1,7 @@
 // const path = require("path");
 
 const express = require("express");
+const url = require("url");
 
 const router = express.Router();
 
@@ -20,7 +21,22 @@ router.get("/", (req, res, next) => {
   //     </div>
   //   </html>
   // `);
-  res.render("home", { title: "My Collections", pathname: "/" });
+
+  console.log(req.protocol);
+  console.log(req.get("host"));
+
+  const formattedUrl = url.format({
+    protocol: req.protocol,
+    host: req.get("host"),
+  });
+
+  console.log("formattedUrl: ", formattedUrl);
+
+  res.render("home", {
+    title: "My Collections",
+    pathname: "/",
+    url: formattedUrl,
+  });
 });
 
 // module.exports = router;

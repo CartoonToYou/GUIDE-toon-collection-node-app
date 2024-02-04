@@ -2,22 +2,20 @@
   <nav class="navbar">
     <ul class="navbar__list navbar__list-left">
       <h2 class="text-bold">
-        <a href='http://localhost:3000/' class="navbar__brand">
+        <a href='<%= url %>' class="navbar__brand">
           My Collections
         </a>
       </h2>
       <li>
         <p class="text-md">
-          <a href='http://localhost:3000/books'
-            class="<%= pathname.includes('books') ? 'navbar__link active' : 'navbar__link' %>">
+          <a href='<%= url %>/books' class="<%= pathname.includes('books') ? 'navbar__link active' : 'navbar__link' %>">
             Books
           </a>
         </p>
       </li>
       <li>
         <p class="text-md">
-          <a href='http://localhost:3000/games'
-            class="<%= pathname.includes('games') ? 'navbar__link active' : 'navbar__link' %>">
+          <a href='<%= url %>/games' class="<%= pathname.includes('games') ? 'navbar__link active' : 'navbar__link' %>">
             Games
           </a>
         </p>

@@ -1,6 +1,6 @@
 const path = require("path");
-
 const express = require("express");
+const url = require("url");
 
 const router = express.Router();
 
@@ -13,7 +13,16 @@ router.get("/games", (req, res) => {
   // );
   // res.sendFile(path.join(__dirname, "..", "views", "games.html"));
 
-  res.render("games", { title: "Games", pathname: "/games" });
+  const formattedUrl = url.format({
+    protocol: req.protocol,
+    host: req.get("host"),
+  });
+
+  res.render("games", {
+    title: "Games",
+    pathname: "/games",
+    url: formattedUrl,
+  });
 });
 
 module.exports = router;
